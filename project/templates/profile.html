@@ -1,0 +1,42 @@
+<!-- templates/profile.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 class="title">
+  Welcome {{ name }} !
+</h1>
+<h1>Add Anime Style to your Photo !</h1>
+<h1>For $0.99 your photo will come to life !</h1>
+<br>
+
+    <form action="/profile" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" id="image">
+        <script
+          src="https://checkout.stripe.com/checkout.js"
+          Stripe.setPublishableKey('PUBLISHABLE_KEY')
+          class="stripe-button"
+          data-key="{{ key }}"
+          data-description="Add anime style for $ 0.99"
+          data-amount="99"
+          data-locale="auto">
+        </script>
+    </form>
+<br>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class="flash">
+          {% for message in messages %}
+          <strong><li>{{ message }}</li></strong>
+          {% endfor %}
+      </ul>
+    {% endif %}
+{% endwith %}
+
+{% if upload %}
+    <div>
+      <img src="result/photo.png" alt="result">
+    </div>
+{% endif %}
+{% endblock %}
