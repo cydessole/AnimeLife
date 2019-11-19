@@ -1,7 +1,7 @@
 # **WORK IN PROGRESS**
 
 # AnimeLife
-An application to add anime style to portraiture photos !
+An application to add anime style to landscape photos !
 
 ## Getting started in 20 minutes
 
