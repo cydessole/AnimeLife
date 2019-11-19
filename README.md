@@ -49,7 +49,7 @@ $ export STRIPE_SECRET_KEY=<YOUR_STRIPE_SECRET_KEY>
 ```
 
 ### Run the script
-You have to run this script in the github directory not in project
+You have to run this script in the AnimeLife directory not in project
 ```shell
 $ flask run
 ```
