@@ -40,7 +40,7 @@ $ . venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-### Environnment
+### Environment
 
 ```shell
 $ export FLASK_APP=project
